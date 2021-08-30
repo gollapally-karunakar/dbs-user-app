@@ -57,8 +57,21 @@ export class CreateUserComponent implements OnInit {
             disableClose:true,
             data: {message:"User added successfully...!"}
           });
+
+          dialogRef.afterClosed().subscribe(result => {
+            console.log('The dialog was closed',result);
+            this.resetForm();
+          });
         }
       });  
     }
+  }
+
+  /**
+   * On reset form function
+   * date : 30-08-2021
+   */
+  resetForm(){
+    this.userFormGroup.reset();
   }
 }
