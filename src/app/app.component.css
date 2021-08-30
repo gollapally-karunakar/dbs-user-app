@@ -1,0 +1,10 @@
+.container{
+    padding: 1%;
+}
+.nav-link{
+    font-size: 20px;
+    color: #fff !important;
+}
+.nav-link:active,.nav-link:checked{
+    font-weight: 600;
+}

@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-header bg-outline-info">
+        Create User
+    </div>
+    <div class="card-body">
+        <form [formGroup]="userFormGroup" (ngSubmit)="createUser(userFormGroup.value)">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="name">User Name:</label>
+                    <input type="text" [ngClass]="{'red-border': !userFormGroup.value.name}" formControlName="name" class="form-control" placeholder="Enter User Name" id="name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email:</label>
+                    <input type="email" [ngClass]="{'red-border': !userFormGroup.value.email}" formControlName="email" class="form-control" placeholder="Enter Email" id="email">
+                </div><br>
+                <div class="form-group col-md-6">
+                    <label for="pnum">Phone Number:</label>
+                    <input type="text" [ngClass]="{'red-border': !userFormGroup.value.phone}" formControlName="phone" class="form-control" placeholder="Enter Phone Number" id="pnum">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="website">Web Site:</label>
+                    <input type="text" formControlName="website" class="form-control" placeholder="Enter Web Site (optional)" id="website">
+                </div>
+                <br>
+            </div>
+            <button type="submit" class="btn btn-outline-info">Create</button>
+            <button type="reset" class="btn btn-outline-secondary" style="margin-left: 1%;">Reset</button>
+            <hr>
+        </form>
+    </div>
+</div>
